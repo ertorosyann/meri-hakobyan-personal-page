@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "HOME",
+    "news": "NEWS",
+    "bio": "BIO",
+    "videoClips": "VIDEO CLIPS",
+    "songs": "SONGS",
+    "photoGallery": "PHOTO GALLERY",
+    "tvProgrammes": "TV PROGRAMMES",
+    "tvSerials": "TV SERIALS",
+    
+    "contactUs": "CONTACT US"
+  },
+  "contact": {
+    "mobile": "Mobile",
+    "viber": "Viber",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram"
+  },
+  "designer": "Designed by Erik Torosyan",
+  "homepage": {
+    "title": "Welcome",
+    "subtitle": "Meri Hakobyan",
+    "description": "Armenian Singer Meri Hakobyan",
+    "slide2Title": "Live Performance",
+    "slide2Subtitle": "Entertainment",
+    "slide2Description": "Amazing Performances",
+    "slide3Title": "Music & Culture",
+    "slide3Subtitle": "Armenian Heritage",
+    "slide3Description": "Preserving Traditions"
+  },
+  "news": {
+    "title": "NEWS",
+    "description": "Stay tuned for the latest news and updates"
+  },
+  "bio": {
+    "title": "BIO",
+    "subtitle": "About Meri Hakobyan",
+    "description": "Meri Hakobyan is a celebrated Armenian singer known for her exceptional talent and contribution to Armenian music and culture. With a deep passion for music, she continues to inspire audiences worldwide."
+  },
+  "videos": {
+    "title": "VIDEO CLIPS",
+    "subtitle": "Music Videos",
+    "description": "Watch the latest music videos and performances"
+  },
+  "songs": {
+    "title": "SONGS",
+    "subtitle": "Discography",
+    "description": "Explore and download the musical works of Meri Hakobyan",
+    "noSongs": "No songs found. Add .mp3 files to the public/music folder.",
+    "format": "Supported format: .mp3 files only",
+    "loading": "Loading songs..."
+  },
+  "gallery": {
+    "title": "PHOTO GALLERY",
+    "subtitle": "Gallery",
+    "description": "Browse through photos from performances, events, and special moments"
+  },
+  "tvProgrammes": {
+    "title": "TV PROGRAMMES",
+    "subtitle": "Television Programs",
+    "description": "Watch our television programs and shows"
+  },
+  "tvSerials": {
+    "title": "TV SERIALS",
+    "subtitle": "Television Serials"
+  },
+  "meriHakobyanTvHosts": {
+    "title": "MERI HAKOBYAN TV HOSTS"
+  },
+  "meriHakobyanTheVoice": {
+    "title": "MERI HAKOBYAN THE VOICE",
+    "subtitle": "Meri Hakobyan - The Voice",
+    "description": "Discover Meri Hakobyan's journey and contribution to Armenian music and television"
+  }
+}
+
