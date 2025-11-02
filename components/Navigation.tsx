@@ -7,7 +7,6 @@ import { useRouter, usePathname } from 'next/navigation'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
-  const [contactOpen, setContactOpen] = useState(false)
   const t = useTranslations()
   const locale = useLocale()
   const router = useRouter()
@@ -21,13 +20,16 @@ export default function Navigation() {
 
   const navItems = [
     { key: 'home', href: '/' },
-    { key: 'news', href: '/news' },
     { key: 'bio', href: '/bio' },
+    { key: 'award', href: '/award' },
+    { key: 'teatre', href: '/teatre' },
+    { key: 'tvSerials', href: '/tv-serials' },
+    { key: 'news', href: '/news' },
     { key: 'videoClips', href: '/video-clips' },
     { key: 'songs', href: '/songs' },
     { key: 'photoGallery', href: '/photo-gallery' },
     { key: 'tvProgrammes', href: '/tv-programmes' },
-    { key: 'tvSerials', href: '/tv-serials' },
+    { key: 'contact', href: '/contact' },
   ]
 
   const switchLanguage = (newLocale: string) => {
@@ -55,13 +57,7 @@ export default function Navigation() {
   }, [isOpen])
 
   const handleLinkClick = () => {
-    setContactOpen(false)
     setIsOpen(false)
-  }
-
-  const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault()
-    setContactOpen(!contactOpen)
   }
 
   return (
@@ -82,7 +78,7 @@ export default function Navigation() {
         <div className="side-menu-overlay" onClick={() => setIsOpen(false)}></div>
         <div className="side-menu-content">
           <div className="side-menu-header">
-            <h2>Meri Hakobyan</h2>
+            <h2>Merri Hakobyan</h2>
             <button 
               className="close-button"
               onClick={() => setIsOpen(false)}
@@ -99,92 +95,6 @@ export default function Navigation() {
                 </Link>
               </li>
             ))}
-            
-            {/* Contact Dropdown */}
-            <li className="contact-menu-item">
-              <a 
-                href="#" 
-                className={`side-menu-link ${contactOpen ? 'active' : ''}`}
-                onClick={handleContactClick}
-              >
-                {t('nav.contactUs')} <span className="dropdown-arrow">▼</span>
-              </a>
-              {contactOpen && (
-                <div className="contact-dropdown">
-                  <a 
-                    href="tel:+37495528992" 
-                    className="contact-option-link"
-                    onClick={handleLinkClick}
-                  >
-                    <div className="contact-option">
-                      <div className="contact-icon mobile">
-                        <svg viewBox="0 0 24 24" fill="white">
-                          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                      </div>
-                      <div className="contact-details">
-                        <div className="contact-number">+374 11 123456</div>
-                        <div className="contact-label">{t('contact.mobile')}</div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a 
-                    href="viber://chat?number=37495528992" 
-                    className="contact-option-link"
-                    onClick={handleLinkClick}
-                  >
-                    <div className="contact-option">
-                      <div className="contact-icon viber">
-                        <svg viewBox="0 0 24 24" fill="white">
-                          <path d="M13.715 1.998c-2.275 0-4.548.3-6.51 1.45-1.962 1.15-3.55 2.84-4.185 4.973-.635 2.132.775 3.625 1.162 3.925.388.3 1.137-.075 1.137-.075L8.75 8.448c0 0 .225-.15.45 0l1.35 1.575c.225.15 0 .45 0 .45l-2.925 3.3c0 0-.15.225 0 .45l.675.675c.225.225.45 0 .6 0l3.15-1.5c0 0 .15 0 .3.15l1.5 1.65c.15.15.3.225.6.075l2.85-1.95c.3-.15.6-.075.6-.075l5.025 1.275c.975.225 1.65-1.425 2.1-3.225.45-1.8.3-4.05-.675-6.225-1.575-2.7-3.975-4.35-6.975-4.8-.75-.15-1.425-.225-2.025-.225z"/>
-                        </svg>
-                      </div>
-                      <div className="contact-details">
-                        <div className="contact-number">+374 10 123456</div>
-                        <div className="contact-label">{t('contact.viber')}</div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a 
-                    href="https://wa.me/37495528992" 
-                    className="contact-option-link"
-                    onClick={handleLinkClick}
-                  >
-                    <div className="contact-option">
-                      <div className="contact-icon whatsapp">
-                        <svg viewBox="0 0 24 24" fill="white">
-                          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
-                        </svg>
-                      </div>
-                      <div className="contact-details">
-                        <div className="contact-number">+374 10 123456</div>
-                        <div className="contact-label">{t('contact.whatsapp')}</div>
-                      </div>
-                    </div>
-                  </a>
-
-                  <a 
-                    href="https://t.me/+37495528992" 
-                    className="contact-option-link"
-                    onClick={handleLinkClick}
-                  >
-                    <div className="contact-option">
-                      <div className="contact-icon telegram">
-                        <svg viewBox="0 0 24 24" fill="white">
-                          <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.06 3.345-.478.332-.913.494-1.302.485-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
-                        </svg>
-                      </div>
-                      <div className="contact-details">
-                        <div className="contact-number">+374 10 123456</div>
-                        <div className="contact-label">{t('contact.telegram')}</div>
-                      </div>
-                    </div>
-                  </a>
-                </div>
-              )}
-            </li>
           </ul>
 
           {/* Language Switcher */}

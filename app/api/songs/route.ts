@@ -53,7 +53,7 @@ export async function GET() {
       // Join artists
       const artistStr = artists.length > 0 
         ? artists.map(a => a.charAt(0).toUpperCase() + a.slice(1)).join(' & ')
-        : 'Meri Hakobyan'
+        : 'Merri Hakobyan'
       
       return {
         id: index + 1,

@@ -136,7 +136,7 @@ export default function Songs() {
       <div className="songs-hero">
         <div className="songs-hero-content">
           <h1 className="songs-hero-title">Discography</h1>
-          <p className="songs-hero-description">Discover and download the musical works of Meri Hakobyan</p>
+          <p className="songs-hero-description">Discover and download the musical works of Merri Hakobyan</p>
           <div className="songs-hero-divider"></div>
         </div>
       </div>
@@ -145,7 +145,7 @@ export default function Songs() {
         <div className="songs-intro">
           <h2 className="songs-intro-title">Music Collection</h2>
           <p className="songs-intro-text">
-            Explore a curated collection of songs featuring the unique voice and artistry of Meri Hakobyan. 
+            Explore a curated collection of songs featuring the unique voice and artistry of Merri Hakobyan. 
             From powerful ballads to energetic performances, experience the diversity of Armenian music.
           </p>
         </div>

@@ -1,6 +1,6 @@
-# Meri Hakobyan Website
+# Merri Hakobyan Website
 
-A modern website for Armenian singer Meri Hakobyan built with Next.js and TypeScript.
+A modern website for Armenian singer Merri Hakobyan built with Next.js and TypeScript.
 
 ## Features
 

@@ -1,64 +1,149 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import { useTranslations } from 'next-intl'
+
+interface Video {
+  id: string
+  title: string
+  loading?: boolean
+}
 
 export default function TVSerials() {
-  const [loadedItems, setLoadedItems] = useState<number[]>([])
-  
-  const serials = [
-    { name: 'Serial 1', desc: 'A compelling drama series featuring captivating storylines and dynamic characters. Follow the journey through love, loss, and triumph.' },
-    { name: 'Serial 2', desc: 'An emotional television serial that explores deep human connections and the power of family bonds. A must-watch drama series.' },
-    { name: 'Serial 3', desc: 'An engaging serial with rich narrative and unforgettable characters. Experience the beauty of Armenian storytelling.' },
+  const t = useTranslations()
+  const [loadedVideos, setLoadedVideos] = useState<string[]>([])
+  const videoIds = [
+    'pvY7aK6Qj7c',
+    'JiAiCl4ncjA',
+    '5KorQ6AZYm8',
+    'oo1a2Y-cDX8',
+    'wDh9NdqL95Y',
+    'XSB3B0_BDwk',
+    'ILuEC3cNFug',
+    'umcglG5Bd5c',
+    'l6AT9_-ZlSY',
   ]
 
+  const [videos, setVideos] = useState<Video[]>(
+    videoIds.map(id => ({ id, title: '', loading: true }))
+  )
+
   useEffect(() => {
-    serials.forEach((_, index) => {
+    // Fetch video titles from YouTube oEmbed API
+    const fetchVideoTitles = async () => {
+      const videoPromises = videoIds.map(async (videoId) => {
+        try {
+          const response = await fetch(
+            `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${videoId}&format=json`
+          )
+          if (response.ok) {
+            const data = await response.json()
+            return { id: videoId, title: data.title, loading: false }
+          }
+        } catch (error) {
+          console.error(`Error fetching title for video ${videoId}:`, error)
+        }
+        return { id: videoId, title: `Video ${videoId}`, loading: false }
+      })
+
+      const fetchedVideos = await Promise.all(videoPromises)
+      setVideos(fetchedVideos)
+    }
+
+    fetchVideoTitles()
+
+    // Animate videos on load
+    videoIds.forEach((_, index) => {
       setTimeout(() => {
-        setLoadedItems(prev => [...prev, index])
-      }, index * 150)
+        setLoadedVideos(prev => [...prev, `video-${index}`])
+      }, index * 100)
     })
   }, [])
 
   return (
     <div className="tv-serials-page">
-      <div className="serials-hero">
-        <div className="serials-hero-content">
-          <h1 className="serials-hero-title">TV Serials</h1>
-          <p className="serials-hero-description">Dive into captivating television serials and stories</p>
-          <div className="serials-hero-divider"></div>
+      <div className="video-hero">
+        <div className="video-hero-content">
+          <h1 className="video-hero-title">{t('tvSerials.title')}</h1>
+          <p className="video-hero-description">{t('tvSerials.subtitle')}</p>
+          <div className="video-hero-divider"></div>
         </div>
       </div>
 
-      <div className="container serials-content-wrapper">
-        <div className="serials-intro">
-          <h2 className="serials-intro-title">Featured Serials</h2>
-          <p className="serials-intro-text">
-            Discover our collection of television serials featuring compelling narratives, 
-            dynamic characters, and powerful storytelling in Armenian television.
+      <div className="container video-content-wrapper">
+        <div className="video-intro">
+          <h2 className="video-intro-title">{t('tvSerials.heading')}</h2>
+          <p className="video-intro-text">
+            {t('tvSerials.description')}
           </p>
         </div>
         
-        <div className="serials-grid">
-          {serials.map((serial, index) => (
-            <div
-              key={index}
-              className={`serial-card ${loadedItems.includes(index) ? 'loaded' : ''}`}
-              style={{ animationDelay: `${index * 0.15}s` }}
+        <div className="video-grid-enhanced">
+          {videos.map((video, index) => (
+            <a
+              key={video.id}
+              href={`https://www.youtube.com/watch?v=${video.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`video-card-enhanced ${loadedVideos.includes(`video-${index}`) ? 'loaded' : ''}`}
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="serial-card-header">
-                <div className="serial-card-icon">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="2" y="7" width="20" height="15" rx="2"/>
-                    <path d="M17 7v10M7 7v10"/>
-                  </svg>
+              <div className="video-card-wrapper">
+                <div className="video-thumbnail-enhanced">
+                  {video.id === '5KorQ6AZYm8' ? (
+                    // Use specific image for this video
+                    <img
+                      src="/images/mecic-poqr.jpg"
+                      alt={video.title}
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement
+                        target.style.display = 'none'
+                        const placeholder = document.createElement('div')
+                        placeholder.className = 'video-placeholder-default'
+                        placeholder.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>'
+                        target.parentElement?.appendChild(placeholder)
+                      }}
+                    />
+                  ) : (
+                    <img
+                      src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
+                      alt={video.title}
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement
+                        // Try hqdefault first
+                        if (!target.src.includes('hqdefault')) {
+                          target.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`
+                        } else {
+                          // If YouTube thumbnails fail, show placeholder
+                          target.style.display = 'none'
+                          const placeholder = document.createElement('div')
+                          placeholder.className = 'video-placeholder-default'
+                          placeholder.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>'
+                          target.parentElement?.appendChild(placeholder)
+                        }
+                      }}
+                    />
+                  )}
+                  <div className="video-overlay">
+                    <div className="video-play-button-enhanced">
+                      <svg viewBox="0 0 68 48">
+                        <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.63-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                        <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="video-duration">Watch Now</div>
                 </div>
-                <h3 className="serial-card-title">{serial.name}</h3>
+                <div className="video-info">
+                  <div className="video-title-enhanced">
+                    <svg className="video-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+                    <span>{video.loading ? 'Loading...' : video.title || `TV Serial ${index + 1}`}</span>
+                  </div>
+                </div>
               </div>
-              <p className="serial-card-desc">{serial.desc}</p>
-              <button className="serial-watch-btn">
-                Watch Now →
-              </button>
-            </div>
+            </a>
           ))}
         </div>
       </div>

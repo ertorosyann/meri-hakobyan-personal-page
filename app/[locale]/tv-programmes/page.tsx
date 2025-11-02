@@ -37,7 +37,7 @@ export default function TVProgrammes() {
           <h2 className="programmes-intro-title">Featured Programs</h2>
           <p className="programmes-intro-text">
             Explore our lineup of television programs featuring entertaining content, 
-            news segments, and special shows with Meri Hakobyan as host.
+            news segments, and special shows with Merri Hakobyan as host.
           </p>
         </div>
         

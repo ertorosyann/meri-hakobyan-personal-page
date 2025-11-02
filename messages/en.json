@@ -3,13 +3,14 @@
     "home": "HOME",
     "news": "NEWS",
     "bio": "BIO",
+    "award": "AWARDS",
+    "teatre": "THEATER",
     "videoClips": "VIDEO CLIPS",
     "songs": "SONGS",
     "photoGallery": "PHOTO GALLERY",
     "tvProgrammes": "TV PROGRAMMES",
     "tvSerials": "TV SERIALS",
-    
-    "contactUs": "CONTACT US"
+    "contact": "CONTACT US"
   },
   "contact": {
     "mobile": "Mobile",
@@ -17,11 +18,30 @@
     "whatsapp": "WhatsApp",
     "telegram": "Telegram"
   },
+  "contactPage": {
+    "title": "CONTACT",
+    "subtitle": "Get in Touch",
+    "description": "Reach out through your preferred method",
+    "heading": "Contact Information",
+    "intro": "Feel free to contact Merri Hakobyan through any of the following channels. Choose the method that's most convenient for you.",
+    "mobileDescription": "Call directly for immediate assistance",
+    "viberDescription": "Message via Viber for quick communication",
+    "whatsappDescription": "Chat on WhatsApp for instant messaging",
+    "telegramDescription": "Connect through Telegram",
+    "email": "Email",
+    "emailDescription": "Send an email for inquiries",
+    "usPhone": "US Phone",
+    "usPhoneDescription": "Call the Los Angeles office",
+    "address": "Address",
+    "addressDescription": "Los Angeles, California office location",
+    "mapTitle": "Office Location",
+    "mapSubtitle": "Find us on the map"
+  },
   "designer": "Designed by Erik Torosyan",
   "homepage": {
     "title": "Welcome",
-    "subtitle": "Meri Hakobyan",
-    "description": "Armenian Singer Meri Hakobyan",
+    "subtitle": "Merri Hakobyan",
+    "description": "Armenian Singer",
     "slide2Title": "Live Performance",
     "slide2Subtitle": "Entertainment",
     "slide2Description": "Amazing Performances",
@@ -31,12 +51,16 @@
   },
   "news": {
     "title": "NEWS",
-    "description": "Stay tuned for the latest news and updates"
+    "subtitle": "Stay connected with the latest from Merri Hakobyan",
+    "heading": "Latest News",
+    "description": "Get the latest updates on performances, releases, and events featuring Merri Hakobyan. Stay connected with news from the world of Armenian music and television.",
+    "interviewsTitle": "Media Interviews and Press Coverage",
+    "interviewsDescription": "Watch exclusive interviews and press coverage featuring Merri Hakobyan. Get insights into her career, music, and personal journey through various media appearances."
   },
   "bio": {
     "title": "BIO",
-    "subtitle": "About Meri Hakobyan",
-    "description": "Meri Hakobyan is a celebrated Armenian singer known for her exceptional talent and contribution to Armenian music and culture. With a deep passion for music, she continues to inspire audiences worldwide."
+    "subtitle": "About Merri Hakobyan",
+    "description": "Merri Hakobyan is a celebrated Armenian singer known for her exceptional talent and contribution to Armenian music and culture. With a deep passion for music, she continues to inspire audiences worldwide."
   },
   "videos": {
     "title": "VIDEO CLIPS",
@@ -46,7 +70,7 @@
   "songs": {
     "title": "SONGS",
     "subtitle": "Discography",
-    "description": "Explore and download the musical works of Meri Hakobyan",
+    "description": "Explore and download the musical works of Merri Hakobyan",
     "noSongs": "No songs found. Add .mp3 files to the public/music folder.",
     "format": "Supported format: .mp3 files only",
     "loading": "Loading songs..."
@@ -63,15 +87,175 @@
   },
   "tvSerials": {
     "title": "TV SERIALS",
-    "subtitle": "Television Serials"
+    "subtitle": "Television Serials",
+    "heading": "Featured TV Serials",
+    "description": "Discover our collection of television serials featuring compelling narratives, dynamic characters, and powerful storytelling. Watch episodes from Meri Hakobyan's television career.",
+    "video1": {
+      "title": "TV Serial Episode 1"
+    },
+    "video2": {
+      "title": "TV Serial Episode 2"
+    },
+    "video3": {
+      "title": "TV Serial Episode 3"
+    },
+    "video4": {
+      "title": "TV Serial Episode 4"
+    },
+    "video5": {
+      "title": "TV Serial Episode 5"
+    },
+    "video6": {
+      "title": "TV Serial Episode 6"
+    },
+    "video7": {
+      "title": "TV Serial Episode 7"
+    },
+    "video8": {
+      "title": "TV Serial Episode 8"
+    },
+    "video9": {
+      "title": "TV Serial Episode 9"
+    }
   },
-  "meriHakobyanTvHosts": {
-    "title": "MERI HAKOBYAN TV HOSTS"
+  "award": {
+    "title": "AWARDS",
+    "subtitle": "Recognition & Achievements",
+    "description": "Celebrating the accolades and honors received throughout an illustrious career in music and entertainment",
+    "heading": "Awards & Recognition",
+    "intro": "Throughout her distinguished career, Merri Hakobyan has been honored with numerous awards and recognitions for her exceptional contributions to Armenian music and culture. These accolades reflect her dedication, talent, and impact on the entertainment industry.",
+    "award1": {
+      "title": "Best Female Artist",
+      "description": "Recognized for outstanding vocal performance and artistic excellence"
+    },
+    "award2": {
+      "title": "Cultural Contribution Award",
+      "description": "Honored for preserving and promoting Armenian musical heritage"
+    },
+    "award3": {
+      "title": "Television Excellence Award",
+      "description": "Acknowledged for exceptional contributions to television programming"
+    },
+    "timelineTitle": "Award History",
+    "timelineSubtitle": "Milestones of Recognition",
+    "timeline1": {
+      "year": "2020",
+      "text": "Received the prestigious Best Female Artist award, recognizing years of dedication to Armenian music and exceptional vocal talent that has touched countless hearts."
+    },
+    "timeline2": {
+      "year": "2019",
+      "text": "Honored with the Cultural Contribution Award for outstanding efforts in preserving Armenian musical traditions and bringing them to new generations."
+    },
+    "timeline3": {
+      "year": "2018",
+      "text": "Awarded the Television Excellence Award for significant contributions to Armenian television programming and cultural representation."
+    }
   },
-  "meriHakobyanTheVoice": {
-    "title": "MERI HAKOBYAN THE VOICE",
-    "subtitle": "Meri Hakobyan - The Voice",
-    "description": "Discover Meri Hakobyan's journey and contribution to Armenian music and television"
+  "teatre": {
+    "title": "THEATER",
+    "subtitle": "Stage Performances & Drama",
+    "description": "Exploring theatrical performances and dramatic works that showcase artistic versatility and stage presence",
+    "heading": "Theater & Stage Performances",
+    "intro": "Merri Hakobyan has graced the theater stage with captivating performances, bringing Armenian stories and dramatic works to life. Her theatrical journey showcases a unique blend of musical talent and dramatic expression, creating memorable experiences for audiences.",
+    "notableRolesTitle": "Notable Stage Roles",
+    "performance1": {
+      "title": "Musical Theater Production",
+      "description": "Leading role in a celebrated Armenian musical theater production"
+    },
+    "performance2": {
+      "title": "Dramatic Performance",
+      "description": "Showcasing exceptional dramatic range and emotional depth"
+    },
+    "performance3": {
+      "title": "Cultural Theater Piece",
+      "description": "Participating in productions that celebrate Armenian cultural heritage"
+    },
+    "performance4": {
+      "title": "How to Get Rid of a Wife",
+      "description": "A comedy play featuring Meri Hakobyan in an engaging theatrical performance",
+      "date": "October 4",
+      "time": "7:30 PM",
+      "cast": "Ben Avetisyan, Meri Hakobyan, Davit Tadevosyan, Vanush Shahinyan",
+      "director": "Vardges Barseghyan",
+      "author": "Aldo Nicolai",
+      "venue": "Theatre on the Roof",
+      "ticketPhone": "818.265.0506",
+      "ticketPlatform": "TicketMicket"
+    },
+    "performance5": {
+      "title": "40 Days Before Ascension",
+      "description": "A tragicomedy performance featuring Meri Hakobyan in a compelling dramatic work",
+      "date": "September 14",
+      "time": "7:00 PM",
+      "cast": "Gnel Ulikhanyan, Meri Hakobyan, Grigori Hakobyan, Yuri Igitkhanyan, Armen Margaryan, Shogher Jalalyan",
+      "director": "",
+      "author": "Samvel Khalatyan",
+      "venue": "AGBU Vatche & Tamar Manoukian Performing Arts Center",
+      "ticketPhone": "818.265.0506",
+      "ticketPlatform": "TicketMicket"
+    },
+    "performance6": {
+      "title": "Interview",
+      "description": "Performed more than 15 times, each show was sold out",
+      "author": "",
+      "venue": "",
+      "role": "",
+      "location": "Los Angeles, California"
+    },
+    "performance7": {
+      "title": "How to Get Rid of a Woman",
+      "description": "Rooftop comedy production at Hollywood Production. Role: Lead Actress.",
+      "author": "",
+      "venue": "Hollywood Production",
+      "role": "Lead Actress",
+      "location": "Los Angeles, California"
+    },
+    "performance8": {
+      "title": "The Idiot",
+      "description": "Classic dramatic adaptation of Dostoevsky's masterpiece",
+      "author": "Fyodor Dostoevsky",
+      "venue": "Theatre named after Vsevolod Shilovsky",
+      "role": "Nastasya Filippovna",
+      "location": "Moscow"
+    },
+    "performance9": {
+      "title": "Mother's Field",
+      "description": "Powerful dramatic work by Chinghiz Aitmatov",
+      "author": "Chinghiz Aitmatov",
+      "venue": "Theatre named after Vsevolod Shilovsky",
+      "role": "Lead Role",
+      "location": "Moscow"
+    },
+    "performance10": {
+      "title": "Eight Women",
+      "description": "Mystery comedy by Robert Thomas",
+      "author": "Robert Thomas",
+      "venue": "Theatre named after Vsevolod Shilovsky",
+      "role": "Pierrette",
+      "location": "Moscow"
+    },
+    "timelineTitle": "Theater History",
+    "timelineSubtitle": "Milestones on Stage",
+    "timeline1": {
+      "year": "2023",
+      "text": "Starred in a major musical theater production, combining exceptional vocal talent with dramatic performance, receiving critical acclaim from audiences and critics alike."
+    },
+    "timeline2": {
+      "year": "2022",
+      "text": "Delivered powerful dramatic performances that showcased versatility beyond music, demonstrating the ability to connect with audiences through theatrical storytelling."
+    },
+    "timeline3": {
+      "year": "2021",
+      "text": "Participated in cultural theater productions that brought Armenian stories and traditions to the stage, contributing to the preservation of cultural heritage through dramatic arts."
+    }
+  },
+  "merriHakobyanTvHosts": {
+    "title": "MERRI HAKOBYAN TV HOSTS"
+  },
+  "merriHakobyanTheVoice": {
+    "title": "MERRI HAKOBYAN THE VOICE",
+    "subtitle": "Merri Hakobyan - The Voice",
+    "description": "Discover Merri Hakobyan's journey and contribution to Armenian music and television"
   }
 }
 
