@@ -1084,6 +1084,124 @@ main {
   .contact-dropdown {
     padding: 0.5rem 1rem 0.5rem 1.5rem;
   }
+
+  /* Contact Page - Extra Small Screens (Better Discipline) */
+  .bio-container {
+    padding: 32px 10px;
+  }
+
+  .bio-content {
+    padding: 20px 12px;
+    margin-bottom: 32px;
+    border-radius: 16px;
+  }
+
+  .bio-title {
+    font-size: 1.75rem;
+    margin-bottom: 12px;
+  }
+
+  .bio-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .achievements-grid {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .achievement-card {
+    padding: 20px 12px;
+    border-radius: 14px;
+  }
+
+  .contact-icon-page {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 10px;
+  }
+
+  .contact-icon-page svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .achievement-icon-wrapper {
+    width: 48px;
+    height: 48px;
+    margin: 0 auto 12px;
+    border-radius: 12px;
+  }
+
+  .achievement-title {
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+  }
+
+  .contact-number-page {
+    font-size: 0.875rem;
+    margin: 5px 0 5px;
+  }
+
+  .achievement-description {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+
+  .contact-info-section {
+    margin-top: 32px;
+  }
+
+  .contact-info-grid {
+    gap: 12px;
+    margin-top: 20px;
+  }
+
+  .contact-address-line {
+    font-size: 0.85rem;
+    margin: 2px 0;
+  }
+
+  .contact-address-details {
+    margin: 8px 0 6px;
+  }
+
+  .map-section {
+    margin-top: 40px;
+    padding: 0 10px;
+  }
+
+  .map-section-title {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+
+  .map-section-subtitle {
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+  }
+
+  .contact-map-iframe {
+    height: 280px;
+    border-radius: 10px;
+  }
+
+  .bio-hero {
+    padding: 80px 0 40px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 2rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
 }
 
 /* Animations */
@@ -2481,20 +2599,20 @@ main {
 
 @media (max-width: 768px) {
   .bio-hero {
-    padding: 120px 0;
+    padding: 100px 0 60px;
   }
 
   .hero-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     letter-spacing: 2px;
   }
 
   .hero-subtitle {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
 
   .hero-description {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .bio-content {
@@ -2568,11 +2686,118 @@ main {
   .achievement-card {
     animation: none;
     opacity: 1;
+    padding: 24px 16px;
+    border-radius: 16px;
   }
 
   .achievement-icon {
     animation: none;
     transform: scale(1);
+  }
+
+  /* Contact Page Mobile Styles - Better Discipline */
+  .bio-container {
+    padding: 40px 12px;
+  }
+
+  .bio-content {
+    padding: 24px 16px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+  }
+
+  .bio-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+  }
+
+  .bio-text {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .achievements-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .contact-icon-page {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 12px;
+  }
+
+  .contact-icon-page svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  .achievement-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    margin: 0 auto 16px;
+    border-radius: 14px;
+  }
+
+  .achievement-title {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  .contact-number-page {
+    font-size: 0.95rem;
+    margin: 6px 0 6px;
+    font-weight: 500;
+  }
+
+  .achievement-description {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+    color: #666;
+  }
+
+  .contact-info-section {
+    margin-top: 40px;
+  }
+
+  .contact-info-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .contact-address-line {
+    font-size: 0.9rem;
+    margin: 3px 0;
+    line-height: 1.5;
+  }
+
+  .contact-address-details {
+    margin: 10px 0 8px;
+  }
+
+  .map-section {
+    margin-top: 48px;
+    padding: 0 12px;
+  }
+
+  .map-section-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .map-section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+  }
+
+  .contact-map-iframe {
+    height: 320px;
+    border-radius: 12px;
   }
 }
 
